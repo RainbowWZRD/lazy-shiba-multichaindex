@@ -14,19 +14,25 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Lazyshiba Multi-Chain Dex</a>
-        </button>
+    <nav class="navbar navbar-expand-lg">
+      <div class="logo-wrapper">
+        <img src="./images/lazyShibaLogo.webp" />
+        <div class="logo-labels-wrapper">
+          <h1>Multi-Chain Dex</h1>
+          <h2>By <a class="lazy-shiba-link" href="https://lazy-shiba.com/"> Lazyshiba </a> </h2>
+        </div>
+      </div>
+    </button>
         <div class="choose-chains-wrapper">
           <p>Choose a chain :</p>
-          <button class="chain-btn">ETH</button>
-          <button class="chain-btn">BSC</button>
-          <button class="chain-btn">POLYGON</button>
+          <button class="chain-btn" id="eth-btn">ETH</button>
+          <button class="chain-btn" id="bsc-btn">BSC</button>
+          <button class="chain-btn" id="polygon-btn">POLYGON</button>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
             </ul>
-            <button id="login_button" class="btn btn-outline-primary my-2 my-sm-0" type="submit">Sign in with Metamask</button>
+            <button id="login_button" class="connect-button" type="submit">Sign in with Metamask</button>
         </div>
       </nav>
     <div class="container">
@@ -55,7 +61,7 @@
                         </div>
                     </div>
                     <div class="estimated-gas-label">Estimated Gas: <span id="gas_estimate"></span></div>
-                    <button disabled class="btn btn-large btn-primary btn-block" id="swap_button">
+                    <button disabled class="swap-btn btn-block" id="swap_button">
                         Swap
                     </button>
                 </div>

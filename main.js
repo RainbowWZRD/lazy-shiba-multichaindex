@@ -1,13 +1,12 @@
 const serverUrl = "https://73o8r4xihl80.usemoralis.com:2053/server"; //Server url from moralis.io
 const appId = "a6KKLhQIU6B0WUZogp4n6VrdbRTUTWN3Dhcg96HO"; // Application id from moralis.io
 
-const chainBtn = document.querySelectorAll(".chain-btn");
-
 
 let currentTrade = {};
 let currentSelectSide;
 let tokens;
-var chainsArray = ["eth", "bsc", "polygon"];
+let chainsArray = ["eth", "bsc", "polygon"];
+
 
 async function init() {
   await Moralis.start({ serverUrl, appId });
