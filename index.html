@@ -14,27 +14,21 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar">
+
       <div class="logo-wrapper">
-        <img src="./images/lazyShibaLogo.webp" />
+        <img class="logo-image" src="./images/lazyShibaLogo.webp" />
         <div class="logo-labels-wrapper">
           <h1>Multi-Chain Dex</h1>
           <h2>By <a class="lazy-shiba-link" href="https://lazy-shiba.com/"> Lazyshiba </a> </h2>
         </div>
       </div>
-    </button>
-        <div class="choose-chains-wrapper">
-          <p>Choose a chain :</p>
-          <button class="chain-btn" id="eth-btn">ETH</button>
-          <button class="chain-btn" id="bsc-btn">BSC</button>
-          <button class="chain-btn" id="polygon-btn">POLYGON</button>
-        </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            </ul>
-            <button id="login_button" class="connect-button" type="submit">Sign in with Metamask</button>
-        </div>
+
+      <div class="connect-btn-wrapper">
+        <button id="login_button" class="connect-button" type="submit">Sign in with Metamask</button>
+      </div>
       </nav>
+      
     <div class="container">
         <div class="row">
             <div class="col col-md-6 offset-md-3" id="window">
@@ -60,8 +54,14 @@
                             <input class="number form-control" placeholder="amount" id="to_amount">
                         </div>
                     </div>
+                    <div class="choose-chains-wrapper">
+                      <label>Chain :</label>
+                      <button class="chain-btn" id="eth-btn">ETH</button>
+                      <button class="chain-btn" id="bsc-btn">BSC</button>
+                      <button class="chain-btn" id="polygon-btn">POLYGON</button>
+                    </div>
                     <div class="estimated-gas-label">Estimated Gas: <span id="gas_estimate"></span></div>
-                    <button disabled class="swap-btn btn-block" id="swap_button">
+                    <button  class="swap-btn btn-block" id="swap_button">
                         Swap
                     </button>
                 </div>

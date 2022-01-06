@@ -1,5 +1,5 @@
-const serverUrl = "https://73o8r4xihl80.usemoralis.com:2053/server"; //Server url from moralis.io
-const appId = "a6KKLhQIU6B0WUZogp4n6VrdbRTUTWN3Dhcg96HO"; // Application id from moralis.io
+const serverUrl = "https://73o8r4xihl80.usemoralis.com:2053/server"; 
+const appId = "a6KKLhQIU6B0WUZogp4n6VrdbRTUTWN3Dhcg96HO"; 
 
 
 let currentTrade = {};
@@ -9,12 +9,11 @@ let chainsArray = ["eth", "bsc", "polygon"];
 let chainStorage = window.localStorage;
 let currentChain = chainStorage.getItem("chain");
 
-
 //ETH
 function setEth() {
   chainStorage.setItem("chain", chainsArray[0])
+  document.getElementById('eth-btn').classList.add("chain-btn-current")
   location.reload();
-  console.log("ETH")
 }
 document.getElementById('eth-btn').addEventListener('click', setEth)
 
@@ -22,7 +21,6 @@ document.getElementById('eth-btn').addEventListener('click', setEth)
 function setBsc() {
   chainStorage.setItem("chain", chainsArray[1])
   location.reload();
-  console.log("BSC")
 }
 document.getElementById('bsc-btn').addEventListener('click', setBsc)
 
@@ -31,7 +29,6 @@ document.getElementById('bsc-btn').addEventListener('click', setBsc)
 function setPolygon() {
   chainStorage.setItem("chain", chainsArray[2])
   location.reload();
-  console.log("POLYGON")
 }
 document.getElementById('polygon-btn').addEventListener('click', setPolygon)
 
@@ -163,7 +160,12 @@ function doSwap(userAddress, amount) {
   });
 }
 
+function testFn () {
+  console.log(address)
+}
+
 init();
+
 
 document.getElementById("modal_close").onclick = closeModal;
 document.getElementById("from_token_select").onclick = () => {
@@ -174,4 +176,5 @@ document.getElementById("to_token_select").onclick = () => {
 };
 document.getElementById("login_button").onclick = login;
 document.getElementById("from_amount").onblur = getQuote;
-document.getElementById("swap_button").onclick = trySwap;
+
+document.getElementById("swap_button").addEventListener("click", trySwap)
